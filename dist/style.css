@@ -5,6 +5,7 @@
 
 .card{
     box-shadow: 6px 5px 5px darkgrey;
+    margin:10px;
 }
 
 .header{
@@ -16,4 +17,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+}
+
+.main-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
