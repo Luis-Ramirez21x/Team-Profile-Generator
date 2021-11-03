@@ -1,0 +1,19 @@
+.employee-info{
+    background-color: #e8eded;
+    padding: 21px;
+}
+
+.card{
+    box-shadow: 6px 5px 5px darkgrey;
+}
+
+.header{
+    width: 100%;
+    background-color: #ed5353;
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
