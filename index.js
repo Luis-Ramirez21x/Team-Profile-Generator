@@ -20,8 +20,9 @@ const htmlStart = `<!DOCTYPE html>
 <body>    
 <div class='header'>
 <h1>My Team</h1>
-</div>`;
-const htmlEnd = `</body>
+</div>
+<div class="main-container">`;
+const htmlEnd = `</div></body>
 </html>`;
 let htmlBodyString ='';
 let employeeList = [];
@@ -115,12 +116,12 @@ function anotherEmployeePrompt(){
             } else if(response.employeeType === 'Intern'){
                 inquirer.prompt(internQuestionsPrompt)
                         .then((response) =>{
-                            const intern = new Intern(response.name, response.id, response.email, response.internSchool);
+                            const intern = new Intern(response.name, response.id, response.email, response.school);
                             employeeList.push(intern);
                             anotherEmployeePrompt();
                         })
             } else if (response.employeeType === "I don't want to add any more team members"){
-              createEmployeeCards();
+              
               fs.writeFile('myTeam.html', createEmployeeCards(),(error, data) =>
               error ? console.error(error) : console.log('succesfully created'))
             }
@@ -134,7 +135,13 @@ inquirer.prompt(managerQuestionPrompt).then((employee) =>{
     
 })
 
+
+/*
+***************For adding linked html and unique github name add it to each method class like "return guthub this.github 
+then just call on getUnique() method 
+*/
 function createEmployeeCards(){
+    console.log(employeeList);
     employeeList.forEach(employee =>{
          // add boot strap html here
          htmlBodyString += `
