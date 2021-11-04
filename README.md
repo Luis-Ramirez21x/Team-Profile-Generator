@@ -1,5 +1,6 @@
 # Team-Profile-Generator
 https://luis-ramirez21x.github.io/Team-Profile-Generator/
+
 Walk Through Video Link: https://watch.screencastify.com/v/zC9LnngCRkYh6LZCAuuF
 
 Prompts user a series of questions oon their employee's info and then generates a webpage displaying that information.
